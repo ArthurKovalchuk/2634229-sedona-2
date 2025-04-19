@@ -11,9 +11,12 @@
   </head>
 
   <body>
-    <div class="wrapper">
+
+    <div class="page-wrapper">
+
+      <!--HEADER-->
       <header class="page">
-        <a class="logo-header" href="index.html">
+        <a class="header-logo" href="index.html">
           <img src="images/logo.svg" alt="Логотип города Седона">
         </a>
         <nav class="navigation">
@@ -28,27 +31,29 @@
               <a class="navigation-link navigation-link" aria-current="page">Гостиницы</a>
             </li>
           </ul>
-          <ul class="navigation-list navigation-user">
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">
-                <span class="visually-hidden">Поиск</span>
+
+          <!--RIGHT NAVIGATION-->
+          <ul class="navigation-list-right">
+            <li class="navigation-search">
+              <a class="navigation-link" href="#">Поиск
               </a>
             </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">
-                <span class="visually-hidden">Избранное</span>
-                <span class="navigation-count">12</span>
+            <li class="navigation-fav">
+              <a class="navigation-link" href="#">Избранное
               </a>
             </li>
-            <li class="navigation-item">
-              <a class="navigation-link navigation-button" href="#">Хочу сюда!</a>
+            <li class="navigation-button">
+              <a class="header-button" href="#">Хочу сюда!
+              </a>
             </li>
           </ul>
         </nav>
       </header>
 
-      <main class="main-inner">
+      <!--MAIN-->
+      <main class="main-catalog">
 
+        <!--HEADER-->
         <div class="inner-hero">
           <header class="inner-header">
             <h1 class="inner-title">Гостиницы Седоны</h1>
@@ -66,6 +71,7 @@
             </nav>
           </header>
 
+          <!--FILTER-->
           <section class="filter">
             <h2 class="visually-hidden">Фильтры для поиска жилья в Седоне</h2>
             <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
@@ -147,6 +153,7 @@
           </section>
         </div>
 
+        <!--CATALOG-->
         <section class="catalog">
           <h2 class="catalog-title">Найдено гостиниц: <span>38</span></h2>
           <select class="select-control" aria-label="Тип сортировки">
@@ -174,7 +181,8 @@
 
           <ul class="catalog-list">
             <li class="catalog-item">
-              <img class="catalog-pic" src="images/hotel-1.jpg" alt="Гостиница Amara Resort & Spa Ночное звездное небо, вид из пещеры.">
+              <img class="catalog-pic" src="images/hotel-1.jpg"
+                alt="Гостиница Amara Resort & Spa Ночное звездное небо, вид из пещеры.">
               <h3 class="catalog-title-small">Amara Resort & Spa</h3>
               <p class="catalog-type">Гостиница</p>
               <p class="catalog-price">От <span>4000</span> ₽</p>
@@ -252,6 +260,7 @@
           </nav>
         </section>
 
+        <!--SUBSCRIPTION-->
         <section class="subscription">
           <h2 class="subscription-title">Подпишитесь на рассылку</h2>
           <p class="subscription-description">Только полезная информация и никакого спама,<br>честное
@@ -264,6 +273,7 @@
         </section>
       </main>
 
+      <!--FOOTER-->
       <footer class="page-footer">
         <ul class="footer-social-list">
           <li class="footer-social-item">
