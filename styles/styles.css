@@ -14,6 +14,10 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -22,11 +26,19 @@ body {
   background-color: white;
   width: 1200px;
   margin: auto;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.20);
 }
 
-li {
-  list-style: none;
+.main-container {
+  flex-grow: 1;
+}
+
+.page-wrapper {
+  margin: 0 auto;
+  width: 1200px;
 }
 
 /*HEADER*/
@@ -34,96 +46,68 @@ li {
   background: white;
   color: black;
   display: flex;
-  padding-inline: 70px;
+  padding: 0 70px;
   column-gap: 30px;
+}
+
+.header-navigation {
+  display: flex;
+  width: 1200px;
+  height: 64px;
 }
 
 .header-logo {
   position: absolute;
+  width: 140px;
+  height: 70px;
 }
 
-.navigation-list {
+.menu {
   display: flex;
   list-style: none;
-  padding: 16px 20px;
+  padding: 0;
   margin-left: 168px;
-  white-space: nowrap;
-}
-
-.navigation-list li {
-  margin-right: 20px;
+  margin-top: 0;
 }
 
 .navigation-link {
-  color: rgb(0, 0, 0);
-  font-family: "PT Sans", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 24px;
-  text-align: left;
-  text-transform: capitalize;
-  text-decoration: none;
   display: flex;
-
-}
-
-.navigation-link-current {
-  color: rgb(0, 0, 0);
-  font-family: "PT Sans", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 24px;
-  text-align: left;
-  text-transform: capitalize;
+  flex-direction: column;
+  color: black;
   text-decoration: none;
-}
-
-.header-navigation {
-  position: static;
-  width: 339px;
+  font-weight: 700;
+  padding: 20px 16px;
+  justify-content: center;
+  width: auto;
   height: 64px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0;
+  line-height: 24px;
+  font-size: 20px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  font-stretch: condensed;
 }
 
 /*RIGHT-NAVIGATION*/
-.navigation-list-right {
+.menu-right {
   display: flex;
   list-style: none;
-  padding: 16px 20px;
-  margin-left: 285px;
+  margin-left: auto;
   white-space: nowrap;
+  margin-top: 0;
 }
 
-.navigation-search a {
+.navigation-right-link {
   display: flex;
   width: 20px;
   height: 20px;
-  background-image: url("/images/search.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  text-indent: -9999px;
-  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  padding: 22px 12px;
 }
 
-.navigation-fav a {
+.header-button {
   display: flex;
-  width: 18px;
-  height: 17px;
-  background-image: url("/images/favorites.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  text-indent: -9999px;
-  overflow: hidden;
-  margin-left: 24px;
-  align-items: center;
-}
-
-.navigation-button a {
   color: white;
   text-decoration: none;
   font-family: "PT Sans", sans-serif;
@@ -132,6 +116,9 @@ li {
   padding: 8px 50px;
   border-radius: 4px;
   align-items: center;
+  margin-right: 0;
+  margin-left: 20px;
+  margin-top: 14px;
 }
 
 /*HERO*/
@@ -152,47 +139,43 @@ li {
   margin-right: auto;
 }
 
-.visually-hidden {
-  overflow: hidden;
-  white-space: nowrap;
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
 
 /*ADVANTAGES*/
-.info-sedona {
-  position: static;
-  width: 620px;
-  height: 72px;
-  font-weight: 700;
-  line-height: 36px;
-  font-size: 30px;
-  text-transform: uppercase;
-  padding-top: 69px;
-  margin-left: 330px;
-  margin-block: 0;
+.visually-hidden {
+  display: none;
 }
 
-.adv-title p {
-  text-align: center;
-  gap: 25;
+.advantages-title {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 25;
+  padding: 69px 0;
 }
 
-.advantages-list h3 {
-  font-size: 24px;
+.info-sedona {
+  color: rgb(0, 0, 0);
+  font-family: "PT Sans", sans-serif;
+  font-size: 30px;
   font-weight: 700;
-  line-height: 28px;
-  position: static;
+  line-height: 36px;
+  letter-spacing: 0%;
+  text-align: center;
   text-transform: uppercase;
+  width: 820px;
+  height: 72px;
+}
 
+.advantages-description {
+  color: rgb(51, 51, 51);
+  font-family: "PT Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-top: 25px;
 }
 
 .image img {
@@ -207,50 +190,23 @@ li {
   padding: 85px 103px;
 }
 
-.blue {
+.advantages-info {
   width: 400px;
+  height: 385px;
   padding-top: 48px;
   text-align: center;
-  background: #81b3d2;
+  color: rgb(0, 0, 0)
+}
+
+.advantages-info h3 {
+  width: 400px;
+  height: 385px;
+  padding-top: 48px;
+  text-align: center;
   color: white;
+  background: rgb(130, 179, 211);
 }
 
-.blue h3 {
-  width: 160px;
-  margin: 0 auto;
-  margin-left: 122px;
-  margin-bottom: 24px;
-  font-size: 21px;
-  line-height: 21px;
-  font-weight: 700;
-}
-
-.blue p {
-  width: 302px;
-  padding-bottom: 21px;
-  margin: 0 auto;
-  font-size: 14px;
-  line-height: 21px;
-  text-align: center;
-  font-weight: 400;
-}
-
-.b2,
-.b4 {
-  width: 400px;
-  padding-top: 48px;
-  text-align: center;
-  background: rgba(131, 179, 211, 0.12);
-  color: black;
-}
-
-.b3 {
-  width: 400px;
-  padding-top: 48px;
-  text-align: center;
-  background: rgba(131, 179, 211, 0.2);
-  color: black;
-}
 
 /*SUBSCRIPTION*/
 .subscription {
