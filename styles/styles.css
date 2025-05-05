@@ -125,8 +125,8 @@ body {
 .hero {
   min-height: 300px;
   padding-block: 51px 82px;
-  background-image: url("/images/mask.svg"),
-    url("/images/index-background.jpg");
+  background-image: url("../images/mask.svg"),
+    url("../images/index-background.jpg");
   background-size: 100% auto, cover;
   background-position: bottom, center;
   background-repeat: no-repeat;
