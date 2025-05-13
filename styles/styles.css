@@ -24,21 +24,24 @@ body {
   line-height: 21px;
   color: black;
   background-color: white;
-  width: 1200px;
-  margin: auto;
+  margin: 0;
   display: flex;
   min-height: 100%;
   flex-direction: column;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.20);
 }
 
 .main-container {
   flex-grow: 1;
 }
 
+li {
+  list-style-type: none;
+}
+
 .page-wrapper {
   margin: 0 auto;
   width: 1200px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.20);
 }
 
 /*HEADER*/
@@ -54,6 +57,7 @@ body {
   display: flex;
   width: 1200px;
   height: 64px;
+  flex-wrap: wrap;
 }
 
 .header-logo {
@@ -125,8 +129,8 @@ body {
 .hero {
   min-height: 300px;
   padding-block: 51px 82px;
-  background-image: url("../images/mask.svg"),
-    url("../images/index-background.jpg");
+  background-image: url("/images/mask.svg"),
+    url("/images/index-background.jpg");
   background-size: 100% auto, cover;
   background-position: bottom, center;
   background-repeat: no-repeat;
@@ -150,7 +154,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 25;
   padding: 69px 0;
 }
 
@@ -165,6 +168,7 @@ body {
   text-transform: uppercase;
   width: 820px;
   height: 72px;
+  margin-bottom: 20px;
 }
 
 .advantages-description {
@@ -175,7 +179,7 @@ body {
   line-height: 26px;
   letter-spacing: 0%;
   text-align: center;
-  margin-top: 25px;
+  margin-top: 5px;
 }
 
 .image img {
@@ -183,30 +187,40 @@ body {
   height: 385px;
 }
 
-.advantages-list li {
-  width: 400px;
-  height: 385px;
-  justify-content: center;
-  padding: 85px 103px;
+.advantages-list  {
+  display: flex;
+  flex-wrap: nowrap;
+  width: auto;
+  padding: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  outline: auto;
+  outline-color: aqua;
 }
 
 .advantages-info {
+  display: flex;
   width: 400px;
   height: 385px;
   padding-top: 48px;
   text-align: center;
-  color: rgb(0, 0, 0)
+  color: rgb(0, 0, 0);
+  padding: 0;
 }
 
-.advantages-info h3 {
-  width: 400px;
-  height: 385px;
-  padding-top: 48px;
-  text-align: center;
-  color: white;
-  background: rgb(130, 179, 211);
+.advantages-list div {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  min-width: 400px;
+  min-height: 385px;
+  justify-content: center;
+  align-items: center;
+  outline: auto;
+  outline-color: blueviolet;
 }
-
 
 /*SUBSCRIPTION*/
 .subscription {
@@ -214,7 +228,7 @@ body {
   width: 1200px;
   height: 414.86px;
   justify-content: center;
-  background-image: url("/images/Subscribe.png");
+  background-image: url("../images/Subscribe.png");
 }
 
 .subscription h2,
