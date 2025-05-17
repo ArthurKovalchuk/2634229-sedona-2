@@ -183,7 +183,7 @@
               Только полезная информация и никакого спама,<br/>честное
               бойскаутское!
             </p>
-            <form
+            <div
               class="subscription-form"
               action="https://echo.htmlacademy.ru/"
               method="post"
@@ -198,39 +198,43 @@
                 placeholder="Ваш e-mail"
                 required
               />
-              <button class="button-subscription" type="submit">
-                Подписаться
+              <button>
+                <a href="#" class="button-subscription">Подписаться</a>
               </button>
-            </form>
+            </div>
         </section>
       </main>
 
       <!--FOOTER-->
       <footer class="page-footer">
-        <ul class="footer-social-list">
-          <li class="footer-social-item">
-            <a href="https://vk.com/htmlacademy" class="footer-social-link">
-              <span class="link">VK</span>
+        <ul class="social-list">
+          <li class="social-item vk">
+            <a href="https://vk.com/htmlacademy" class="social-link">
+              <img src="images/logo-vk.svg" alt="Ссылка на ВКонтакте">
             </a>
           </li>
-          <li class="footer-social-item">
-            <a href="https://t.me/htmlacademy" class="footer-social-link">
-              <span class="link">Telegram</span>
+          <li class="social-item tg">
+            <a href="https://t.me/htmlacademy" class="social-link">
+              <img src="images/logo-tg.svg" alt="Ссылка на Telegram">
             </a>
           </li>
-          <li class="footer-social-item">
+          <li class="social-item youtube">
             <a
               href="https://www.youtube.com/user/htmlacademyru"
-              class="footer-social-link"
+              class="social-link"
             >
-              <span class="link">YouTube</span>
+              <img src="images/logo-youtube.svg" alt="Ссылка на YouTube">
             </a>
           </li>
-        </ul>
-        <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        <a class="footer-copyright" href="https://htmlacademy.ru/">
-          <span class="link">HTML Academy</span>
+          <li>
+        <a class="phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+          </li>
+          <li>
+        <a class="copyright" href="https://htmlacademy.ru/">
+          <img src="images/logo-htmla.svg" alt="Ссылка на сайт html academy">
         </a>
+          </li>
+        </ul>
       </footer>
     </div>
   </body>
