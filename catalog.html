@@ -54,19 +54,22 @@
       <!--MAIN-->
       <main class="main-catalog">
 
-        <!--HEADER-->
+        <!--HERO-->
         <div class="inner-hero">
           <header class="inner-header">
             <h1 class="inner-title">Гостиницы Седоны</h1>
             <nav class="breadcrumbs" aria-label="Навигация">
               <ul class="breadcrumbs-list">
                 <li class="breadcrumbs-item">
-                  <a class="breadcrumbs-link" href="index.html">
+                  <a class="breadcrumbs-link home" href="index.html">
                     <span class="visually-hidden">Главная</span>
+                    <img src="images/mini-home.svg" alt="Вернуться на главную">
                   </a>
+                <li class="breadcrumbs-item decoration">
+                  <img src="images/arrow-vector.svg">
                 </li>
-                <li class="breadcrumbs__item">
-                  <span class="breadcrumbs__link" aria-current="page">Гостиницы</span>
+                </li>
+                <li class="breadcrumbs-item catalog">Гостиницы
                 </li>
               </ul>
             </nav>
@@ -79,7 +82,7 @@
 
               <fieldset class="filter-fieldset">
                 <legend class="filter-legend">Инфраструктура:</legend>
-                <ul class="filter-list">
+                 <ul class="filter-list">
                   <li class="filter-item">
                     <label class="control">
                       <input class="control-input" type="checkbox" name="pool" checked>
@@ -129,21 +132,21 @@
                 <legend class="filter-legend">Стоимость, ₽:</legend>
                 <ul class="filter-list-price">
                   <li class="filter-item-price">
-                    <label class="filter-label-price">
+                    <label class="filter-price min">
                       <input class="min-price" type="number" value="0" name="min-price" placeholder="от">
                       <span class="from">от</span>
                     </label>
                   </li>
                   <li class="filter-item-price">
-                    <label class="filter-label-price">
+                    <label class="filter-price max">
                       <input class="max-price" type="number" value="9000" name="max-price" placeholder="до">
                       <span class="before">до</span>
                     </label>
                   </li>
                 </ul>
-                <div class="range">
-                  <input class="range-min" type="range" name="price-range" min="0" max="100000" step="10" value="0">
-                  <input class="range-max" type="range" name="price-range" min="0" max="100000" step="10" value="9000">
+                <div class="slider">
+                  <input type="range" min="0" max="10000" value="0">
+                  <input type="range" min="0" max="10000" value="9000">
                 </div>
                 <div class="filter__buttons">
                   <button class="filter-button" type="submit">Применить</button>
