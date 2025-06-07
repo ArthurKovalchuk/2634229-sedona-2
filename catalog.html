@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Поиск гостиницы в Седоне</title>
+    <title>Седона | Гостиницы</title>
     <meta name="description" content="Выбрать гостиницу в седоне">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
@@ -16,9 +16,9 @@
 
       <!--HEADER-->
       <header class="header">
-        <span class="header-logo">
-          <img src="images/logo.svg" alt="Логотип города Седона" />
-        </span>
+        <a class="header-logo" href="index.html">
+          <img src="images/logo.svg" alt="Логотип города Седона">
+        </a>
         <nav class="header-navigation">
           <ul class="menu">
             <li class="navigation-item">
@@ -80,7 +80,7 @@
             <h2 class="visually-hidden">Фильтры для поиска жилья в Седоне</h2>
             <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
 
-              <fieldset class="filter-fieldset">
+              <fieldset class="filter-fieldset comfort">
                 <legend class="filter-legend">Инфраструктура:</legend>
                  <ul class="filter-list">
                   <li class="filter-item">
@@ -104,7 +104,7 @@
                 </ul>
               </fieldset>
 
-              <fieldset class="filter-fieldset">
+              <fieldset class="filter-fieldset home">
                 <legend class="filter-legend">Тип жилья:</legend>
                 <ul class="filter-list">
                   <li class="filter-item">
@@ -128,7 +128,7 @@
                 </ul>
               </fieldset>
 
-              <fieldset class="filter-fieldset">
+              <fieldset class="filter-fieldset price">
                 <legend class="filter-legend">Стоимость, ₽:</legend>
                 <ul class="filter-list-price">
                   <li class="filter-item-price">
@@ -145,10 +145,13 @@
                   </li>
                 </ul>
                 <div class="slider">
-                  <input type="range" min="0" max="10000" value="0">
-                  <input type="range" min="0" max="10000" value="9000">
+                  <div class="progress"></div>
                 </div>
-                <div class="filter__buttons">
+                <div class="range-input">
+                  <input type="range" class="range-min" min="0" max="10000" value="0" step="100">
+                  <input type="range" class="range-max" min="0" max="10000" value="9000" step="100">
+                </div>
+                <div class="filter-buttons">
                   <button class="filter-button" type="submit">Применить</button>
                   <button class="filter-button" type="reset">Сбросить</button>
                 </div>
@@ -159,6 +162,7 @@
 
         <!--CATALOG-->
         <section class="catalog">
+          <div class="sorting">
           <h2 class="catalog-title">Найдено гостиниц: <span>38</span></h2>
           <select class="select-control" aria-label="Тип сортировки">
             <option value="popular">Сначала популярные</option>
@@ -182,7 +186,7 @@
               </a>
             </li>
           </ul>
-
+         </div>
           <ul class="catalog-list">
             <li class="catalog-item">
               <img class="catalog-pic" src="images/hotel-1.jpg"
@@ -190,27 +194,25 @@
               <h3 class="catalog-title-small">Amara Resort & Spa</h3>
               <p class="catalog-type">Гостиница</p>
               <p class="catalog-price">От <span>4000</span> ₽</p>
-              <a class="catalog-button" href="#">Подробнее</a>
-              <button class="catalog-utton" type="button">В избранное</button>
-              <div class="catalog-stars catalog-stars-four">
+              <a class="catalog-button left" href="#">Подробнее</a>
+              <button class="catalog-button right" type="button">В избранное</button>
+              <div class="catalog-stars four">
                 <span class="visually-hidden">4 звезды</span>
               </div>
-              <p class="catalog-rating button">Рейтинг: <span>8,5</span></p>
+              <p class="catalog-rating">Рейтинг: <span>8,5</span></p>
             </li>
             <li class="catalog-item">
-              <article>
                 <img class="catalog-pic" src="images/hotel-2.jpg"
                   alt="Гостиница Villas at Poco Diablo Горный пейзаж с радугой на фоне облачного неба.">
                 <h3 class="catalog-title-small">Villas at Poco Diablo</h3>
                 <p class="catalog-type">Гостиница</p>
                 <p class="catalog-price">От <span>5000</span> ₽</p>
-                <a class="catalog-button" href="#">Подробнее</a>
-                <button class="catalog-utton" type="button">В избранное</button>
-                <div class="catalog-stars catalog-stars-four">
+                <a class="catalog-button left" href="#">Подробнее</a>
+                <button class="catalog-button right" type="button">В избранное</button>
+                <div class="catalog-stars four">
                   <span class="visually-hidden">4 звезды</span>
                 </div>
-                <p class="catalog-rating button">Рейтинг: <span>9,2</span></p>
-              </article>
+                <p class="catalog-rating">Рейтинг: <span>9,2</span></p>
             </li>
             <li class="catalog-item">
               <img class="catalog-pic" src="images/hotel-3.jpg"
@@ -218,12 +220,12 @@
               <h3 class="catalog-title-small">Desert Quail Inn</h3>
               <p class="catalog-type">Гостиница</p>
               <p class="catalog-price">От <span>2500</span> ₽</p>
-              <a class="catalog-button" href="#">Подробнее</a>
-              <button class="catalog-utton" type="button">В избранное</button>
-              <div class="catalog-stars catalog-stars-four">
+              <a class="catalog-button left" href="#">Подробнее</a>
+              <button class="catalog-button right" type="button">В избранное</button>
+              <div class="catalog-stars three">
                 <span class="visually-hidden">3 звезды</span>
               </div>
-              <p class="catalog-rating button">Рейтинг: <span>6,9</span></p>
+              <p class="catalog-rating">Рейтинг: <span>6,9</span></p>
             </li>
             <li class="catalog-item">
               <img class="catalog-pic" src="images/hotel-4.jpg"
@@ -231,12 +233,12 @@
               <h3 class="catalog-title-small">GreenTree Inn</h3>
               <p class="catalog-type">Гостиница</p>
               <p class="catalog-price">От <span>1500</span> ₽</p>
-              <a class="catalog-button" href="#">Подробнее</a>
-              <button class="catalog-utton" type="button">В избранное</button>
-              <div class="catalog-stars catalog-stars-four">
+              <a class="catalog-button left" href="#">Подробнее</a>
+              <button class="catalog-button right" type="button">В избранное</button>
+              <div class="catalog-stars two">
                 <span class="visually-hidden">2 звезды</span>
               </div>
-              <p class="catalog-rating button">Рейтинг: <span>5,0</span></p>
+              <p class="catalog-rating">Рейтинг: <span>5,0</span></p>
             </li>
           </ul>
 
