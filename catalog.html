@@ -162,28 +162,28 @@
 
         <!--CATALOG-->
         <section class="catalog">
-          <div class="sorting">
+        <div class="sorting">
           <h2 class="catalog-title">Найдено гостиниц: <span>38</span></h2>
           <select class="select-control" aria-label="Тип сортировки">
             <option value="popular">Сначала популярные</option>
             <option value="cheap" selected>Сначала дешёвые</option>
             <option value="expensive">Сначала дорогие</option>
           </select>
-          <ul class="view-button">
+          <ul class="view-button-list">
             <li class="view-button-item">
-              <a class="view-button-tile" href="#">
+              <button class="view-button tile" type="button" aria-label="Показать сетку" aria-pressed="true">
                 <span class="visually-hidden">Показывать плиткой</span>
               </a>
             </li>
             <li class="view-button-item">
-              <a class="view-button-card" href="#">
+              <button class="view-button card" type="button" aria-label="Показать карточки" aria-pressed="false">
                 <span class="visually-hidden">Показывать карточками</span>
-              </a>
+              </button>
             </li>
             <li class="view-button-item">
-              <a class="view-button-list" href="#">
+              <button class="view-button list" type="button" aria-label="Показать список" aria-pressed="false">
                 <span class="visually-hidden">Показывать списком</span>
-              </a>
+              </button>
             </li>
           </ul>
          </div>
@@ -245,22 +245,22 @@
           <nav class="pagination-nav" aria-label="Навигация по страницам">
             <ul class="pagination-list">
               <li class="pagination-item">
-                <a class="pagination-button" href="#" aria-current="true">1</a>
+                <button class="pagination-button one" href="#" aria-current="true">1</button>
               </li>
               <li class="pagination-item">
-                <a class="pagination-button" href="#">2</a>
+                <button class="pagination-button two" href="#">2</button>
               </li>
               <li class="pagination-item">
-                <a class="pagination-button" href="#">3</a>
+                <button class="pagination-button three" href="#">3</button>
               </li>
               <li class="pagination-item">
-                <a class="pagination-button" href="#">4</a>
+                <button class="pagination-button four" href="#">4</button>
               </li>
               <li class="pagination-item">
-                <span class="pagination-button" aria-hidden="true">...</span>
+                <span class="pagination-button gap" aria-hidden="true">...</span>
               </li>
               <li class="pagination-item">
-                <a class="pagination-button" href="#">10</a>
+                <button class="pagination-button ten" href="#">10</button>
               </li>
             </ul>
           </nav>
