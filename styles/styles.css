@@ -30,6 +30,11 @@ body {
   flex-direction: column;
 }
 
+button,
+a {
+  transition: ease-in-out 300ms;
+}
+
 .main-container {
   flex-grow: 1;
 }
@@ -92,7 +97,6 @@ li {
   box-sizing: border-box;
   white-space: nowrap;
   border-bottom: 2px solid transparent;
-  transition: ease-in-out 300ms;
 }
 
 .navigation-link[aria-current="page"] {
@@ -701,9 +705,12 @@ li {
   height: 20px;
 }
 
-.breadcrumbs-item.home img {
-  width: 13px;
-  height: 15px;
+.breadcrumbs-link.home {
+  color: white;
+}
+
+.breadcrumbs-link.home:hover {
+  color: white;
 }
 
 .breadcrumbs-item.catalog {
@@ -864,26 +871,29 @@ li {
   margin: 0;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  color: black;
   cursor: pointer;
   background-size: 14px 16px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.view-button[aria-pressed="true"] {
+.view-button:hover {
   border: 2px solid black;
 }
 
-.view-button.tile {
-  background-image: url("../images/view-grid-icon.svg");
+.view-button:focus {
+  border: 2px solid #68a2ca;
 }
 
-.view-button.card {
-  background-image: url("../images/view-extended-icon.svg");
+.view-button:active {
+  border: 2px solid #68a2ca;
+  color: #68a2ca;
 }
 
-.view-button.list {
-  background-image: url("../images/view-list-icon.svg");
+.view-button[aria-pressed="true"] {
+  border: 2px solid black;
+  cursor: default;
 }
 
 .view-button.selected {
@@ -933,6 +943,7 @@ li {
   text-align: right;
 }
 
+/* Кнопки каталога */
 .catalog-button {
   text-decoration: none;
   padding: 8px 26px;
@@ -952,6 +963,18 @@ li {
   padding: 8px 26px;
 }
 
+.catalog-button.left:hover {
+  background-color:  #615048;
+}
+
+.catalog-button.left:focus {
+  background-color:  #615048;
+}
+
+.catalog-button.left:active {
+  background-color:  #756157;
+}
+
 .catalog-button.right {
   background-color: #82b3d3;
   text-wrap: nowrap;
@@ -959,6 +982,37 @@ li {
   cursor: pointer;
 }
 
+.catalog-button.right.active {
+  background-color: #7db54f;
+}
+
+.catalog-button.right.active:hover {
+  background-color:  #6c9e42;;
+}
+
+.catalog-button.right.active:focus {
+  background-color:  #6c9e42;;
+}
+
+.catalog-button.right.active:active {
+  background-color: #7db54f;
+  opacity: 0.3;
+}
+
+.catalog-button.right:hover {
+  background-color:  #68a2ca;
+}
+
+.catalog-button.right:focus {
+  background-color:  #68a2ca;
+}
+
+.catalog-button.right:active {
+  background-color:  #82b3d3;
+  opacity: 0.3;
+}
+
+/* Звёзды рейтинга */
 .catalog-rating {
   border-radius: 4px;
   text-transform: uppercase;
@@ -1026,7 +1080,21 @@ li {
   cursor: pointer;
 }
 
+.pagination-item button:hover {
+  background-color:  #68a2ca;
+}
+
+.pagination-item button:focus {
+  background-color:  #68a2ca;
+}
+
+.pagination-item button:active {
+  background-color: #82b3d3;
+  opacity: 0.3;
+}
+
 .pagination-button.one {
    background-color:  #f2f2f2;
    color: black;
+   cursor: default;
 }
